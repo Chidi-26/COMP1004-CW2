@@ -1,0 +1,51 @@
+
+main{
+    border: 1px solid black;
+    margin-top: 2%;
+}
+nav ul li {
+    list-style-type: none;
+    padding: 10px;
+}
+.grid-main-sidenav{
+    display: grid;
+   grid-template-columns: 1fr 4fr;
+   column-gap: 50px; 
+}
+
+header {
+    grid-column: span 2;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+   
+}
+aside{
+    padding: 10px;
+    border: 1px solid black;
+    height: 10cm;
+    margin-top: 10%;
+    column-gap: 50px;
+}
+footer{
+     grid-column: span 2;
+     text-align: center;
+     border: 1px solid black;
+     
+     margin-top: 7%;
+    
+}
+
+/* Responsive layout */
+@media screen and (max-width: 500px) {
+    /* Stack links vertically */
+    nav ul {
+        flex-direction: column;
+    }
+}
