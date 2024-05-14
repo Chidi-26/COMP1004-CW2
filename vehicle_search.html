@@ -6,6 +6,7 @@
         <meta name="description" content="Chidi's Coursework" />
         <link href="CW2.css" rel="stylesheet" type="text/css">
         <title>Coursework 2 COMP1004</title>
+        <script src="v-search.js" type="module"></script>
     </head>
     <body>
         <div class="grid-main-sidenav"> 
@@ -16,7 +17,7 @@
                 <ul>
                     <li><a href="index.html">People search</a></li>
                     <li><a href="vehicle_search.html">Vehicle search</a></li>
-                    <li><a href="add_a_vehicle.html">Add a Vehicle</a></li>
+                    <li><a href="add_a_vehicle.html">Add a vehicle</a></li>
                 </ul>
             </nav>
         </header>
@@ -35,12 +36,12 @@
             
         </aside>
         <main>
-            <form id="vehicleSearchForm">
+            <div id="vehicleSearchForm">
                 <label for="rego">Vehicle Registration Number:</label>
                 <input type="text" id="rego" name="rego">
     
-                <button type="submit">Submit</button>
-            </form>
+                <button type="submit" id="vehicle-id">Submit</button>
+            </div>
     
             <div id="results">
                 <!-- Search results will be displayed here -->
@@ -52,7 +53,6 @@
         <footer>
             <p>COMP1004- Coursework 2</p>
         </footer>
-        <script src="SearchDate.js"></script>
 
     </div>
 
