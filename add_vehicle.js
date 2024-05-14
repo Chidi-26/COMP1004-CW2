@@ -15,7 +15,7 @@ addVehicleButton.addEventListener("click", addVehicle);
 
 
 function addVehicle(registrationNumber, make, model, colour, owner) {
-    // Create an object representing the new vehicle
+   
     const newVehicle = {
       registrationNumber: registrationNumber,
       make: make,
@@ -23,35 +23,4 @@ function addVehicle(registrationNumber, make, model, colour, owner) {
       colour: colour,
       owner: owner
     };
-  
-   
-    fetch(supabaseUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'apikey': supabaseKey 
-      },
-      body: JSON.stringify(newVehicle)
-    })
-    .then(response => {
-      if (response.ok) {
-     
-        showMessage('Vehicle added successfully');
-      } else {
-     
-        showMessage('Error adding vehicle. Please try again.');
-      }
-    })
-    .catch(error => {
-
-      console.error('Error:', error);
-      showMessage('Network error. Please try again later.');
-    });
-  }
-  
-  function showMessage(message) {
-    
-    const messageElement = document.getElementById('message');
-
-    messageElement.textContent = message;
-  }
+}
